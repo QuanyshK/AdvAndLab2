@@ -20,8 +20,8 @@ dependencyResolutionManagement {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/QuanyshK/ChatEchoLib")
             credentials {
-                username = providers.gradleProperty("gpr.user").getOrElse("")
-                password = providers.gradleProperty("gpr.key").getOrElse("")
+                username = "QuanyshK"
+                password = "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"
             }
         }
     }

@@ -3,15 +3,16 @@ package com.example.advandlab2
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.advandlab2.databinding.ActivityMainBinding
 import com.example.chatecholib.ChatStarter
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val buttonSend = findViewById<Button>(R.id.buttonSend)
-        buttonSend.setOnClickListener {
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.buttonSend.setOnClickListener {
             ChatStarter.start(this)
         }
     }
